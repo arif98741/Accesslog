@@ -1,0 +1,34 @@
+{
+    "name": "xenon/laravelbdsms",
+    "description": "This is package for saving access in system as file or database",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ariful islam",
+            "email": "arif98741@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3|^7.3",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xenon\\AccessLog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xenon\\AccessLog\\XenonAccessLogProvider"
+            ],
+            "aliases": {
+                "AccessLog": "Xenon\\AccessLog\\Facades\\SMS",
+                "LaravelBDSms": "Xenon\\AccessLog\\Facades\\SMS"
+            }
+        }
+    }
+}
